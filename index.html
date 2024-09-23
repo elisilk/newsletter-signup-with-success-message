@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+
+    <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+
+    <link rel="stylesheet" href="style.css">
+    <script defer src="./script.js"></script>
+
+    <title>Frontend Mentor | Newsletter sign-up form with success message</title>
+  </head>
+  <body>
+
+    <header>
+      <h1 class="visually-hidden">Newsletter sign-up form with success message</h1>
+    </header>
+
+    <main class="main">
+      <section id="form-section" class="form-section">
+        <!-- Sign-up form start -->
+        <div class="text-content">
+          <div class="text">
+            <h2 class="text-title">Stay updated!</h2>
+            <p>Join 60,000+ product managers receiving monthly updates on:</p>
+            <ul class="text-list">
+              <li>Product discovery and building what matters</li>
+              <li>Measuring to ensure updates are a success</li>
+              <li>And much more!</li>
+            </ul>
+          </div>
+          <form id="email-form" class="email-form" novalidate>
+            <div>
+              <label for="email">Email address</label>
+              <input type="email" id="email" name="email" autocomplete="email" placeholder="email@company.com" required/>
+              <span aria-live="polite" id="email-error" class="error"></span>
+            </div>
+            <button>Subscribe to monthly newsletter</button>
+          </form>
+        </div>
+        <!-- Sign-up form end -->
+        <picture>
+          <source media="(min-width: 53rem)" srcset="assets/images/illustration-sign-up-desktop.svg">
+          <img class="form-img" src="assets/images/illustration-sign-up-mobile.svg" alt="illustration"/>
+        </picture>
+      </section>
+
+      <section id="success-modal" class="success-modal visually-hidden">
+        <!-- Success message start -->
+        <div class="text-content">
+          <img src="assets/images/icon-success.svg" alt="success checkmark" height="64" width="64">
+          <h2 class="text-title">Thanks for subscribing!</h2>
+          <p>A confirmation email has been sent to <span id="submitted-email">ash@loremcompany.com</span>. Please open it and click the button inside to confirm your subscription.</p>
+        </div>
+        <button id="success-modal-btn">Dismiss message</button>
+        <!-- Success message end -->
+      </section>
+    </main>
+
+  </body>
+</html>
